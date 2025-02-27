@@ -17,7 +17,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
+
             background-color: #c686c1;
             font-family: Arial, sans-serif;
         }
@@ -71,7 +71,7 @@
             background-position: center;
             font-size: 24px;
             font-family: "Pacifico", cursive;
-            
+
             cursor: pointer;
         }
 
@@ -124,7 +124,7 @@
         <div class="card-inner">
             <div class="card-front" id="text">Click to Open</div>
             <div class="card-back" id="message">প্রিয় ইষ্টিকুটুম,<br>
-                তোমার সাথে পরিচয় হয়েছে বেশ ক'দিনই হলো। এরমধ্যে আমার খারাপ তুমি কখনো চাও নি যা বলেছো যা
+                তোমার সাথে পরিচয় হয়েছে বেশ ক'দিনই হলো। এর মধ্যে আমার খারাপ তুমি কখনো চাও নি যা বলেছো যা
                 চেয়েছো,,,বকেছো আমার ভালোর জন্যই করেছো। তুমি সবার সাথে সমান ভাবে মেশো না সেটা আমি জানি,,, তাই
                 তোমার সাথে এভাবে মিশতে পারা টা আমার কাছে সৌভাগ্যই মনে হয়। এখন ভুল করে ফেলেছি তাই ক্ষমা তো চাইতেই হবে
                 কারণ আমি চাই ঐ বকাবকি টা জারি থাকুক সবসময় ❤,,,ওটা আমার জন্য খুব স্পেশাল। এখন আমি ডেভেলপার মানুষ তাই
@@ -151,10 +151,14 @@
                     let sorry = document.createElement("div");
                     sorry.innerText = "Sorry ";
                     sorryText.appendChild(sorry);
+
+                    // Scroll to the last "Sorry" element every time it's added
+                    sorry.scrollIntoView({ behavior: 'smooth', block: 'end' });
                 }, delay);
-                delay += 500; // Increment delay by 1000ms (1 second) for each iteration
+                delay += 500; // Increment delay by 500ms (1 second) for each iteration
             }
         }
+
     </script>
 </body>
 
